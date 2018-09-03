@@ -76,6 +76,7 @@ public:
 
 	virtual void    processAllOverlappingPairs(btOverlapCallback* callback,btDispatcher* dispatcher, const struct btDispatcherInfo& dispatchInfo)
 	{
+		(void)dispatchInfo;
 		processAllOverlappingPairs(callback, dispatcher);
 	}
 	virtual btBroadphasePair* findPair(btBroadphaseProxy* proxy0, btBroadphaseProxy* proxy1) = 0;

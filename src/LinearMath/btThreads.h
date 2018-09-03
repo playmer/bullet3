@@ -72,6 +72,7 @@ public:
 //
 SIMD_FORCE_INLINE void btMutexLock( btSpinMutex* mutex )
 {
+    (void)mutex;
 #if BT_THREADSAFE
     mutex->lock();
 #else
@@ -81,6 +82,7 @@ SIMD_FORCE_INLINE void btMutexLock( btSpinMutex* mutex )
 
 SIMD_FORCE_INLINE void btMutexUnlock( btSpinMutex* mutex )
 {
+    (void)mutex;
 #if BT_THREADSAFE
     mutex->unlock();
 #else
@@ -90,6 +92,7 @@ SIMD_FORCE_INLINE void btMutexUnlock( btSpinMutex* mutex )
 
 SIMD_FORCE_INLINE bool btMutexTryLock( btSpinMutex* mutex )
 {
+    (void)mutex;
 #if BT_THREADSAFE
     return mutex->tryLock();
 #else

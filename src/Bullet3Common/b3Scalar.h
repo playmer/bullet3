@@ -93,7 +93,7 @@ inline int	b3GetVersion()
 #ifdef B3_DEBUG
 	#ifdef _MSC_VER
 		#include <stdio.h>
-		#define b3Assert(x) { if(!(x)){b3Error("Assert "__FILE__ ":%u ("#x")\n", __LINE__);__debugbreak();	}}
+		#define b3Assert(x) { if(!(x)){b3Error("Assert " __FILE__ ":%u ("#x")\n", __LINE__);__debugbreak();	}}
 	#else//_MSC_VER
 		#include <assert.h>
 		#define b3Assert assert

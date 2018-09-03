@@ -222,7 +222,8 @@ public:
 			}
 		default:
 			{
-			    btAssert(0 && "Invalid limitIndex specified for btConeTwistConstraint");
+          auto identity = [](auto a) { return a; };
+			    btAssert(identity(false) && "Invalid limitIndex specified for btConeTwistConstraint");
 			    return 0.0;
 			}
 		};

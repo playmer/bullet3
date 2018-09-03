@@ -488,7 +488,8 @@ public:
 			int littleEndian= 1;
 			littleEndian= ((char*)&littleEndian)[0];
 
-			if (sizeof(void*)==8)
+      auto identity = [](auto a) { return a; };
+			if (identity(sizeof(void*)==8))
 			{
 				buffer[7] = '-';
 			} else
